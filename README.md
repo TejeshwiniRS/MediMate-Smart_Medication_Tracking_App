@@ -160,31 +160,37 @@ MediMate integrates several browser device capabilities:
 ## Splash Page
 
 Application entry screen for authentication.
-
+![Splash Page] public/screenshot/Splash_page.png
 
 ## Dashboard
 
 Displays today's medications, notifications, and quick actions.
+![Dashboard] public/screenshot/Dashboard.png
 
 ## Log Medication
 
 Users can log medication doses directly from the dashboard.
+![Logging Medicine] public/screenshot/Logging_Medicine.png
 
 ## Add Medication (with OCR)
 
 Scan or upload prescription images to automatically populate medication information.
-
+![Add Medication with OCR - 1] public/screenshot/Add_Medication_with_OCR_1.png
+![Add Medication with OCR - 2] public/screenshot/Add_Medication_with_OCR_2.png
 ## My Medications
 
 List view of all medications with editing options.
+![My Medication] public/screenshot/My_Medication.png
 
 ## Edit Medication
 
 Modify medication details, schedules, or dosage.
+![Edit Medication] public/screenshot/Edit_Medication.png
 
 ## Inventory View
 
 Displays current stock levels and refill estimates.
+![View Inventory] public/screenshot/View_Inventory.png
 
 ## Settings
 
@@ -193,6 +199,16 @@ Manage:
 - Notification preferences
 - Pharmacy preferences
 - Location permissions
+![Settings] public/screenshot/settings.png
+
+## Notifications
+
+- Medication Notification
+![Medication Notification] public/screenshot/Med_notification.png
+- Inventory Notification
+![Inventory Notification] public/screenshot/Inventory_notificaation.png
+- System Notification
+![System Notification] public/screenshot/System_notification.png
 
 ---
 
