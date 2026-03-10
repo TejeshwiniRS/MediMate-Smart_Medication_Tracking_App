@@ -1,0 +1,134 @@
+:root {
+  /* Backgrounds */
+  --color-bg: #faf7f2;
+  --color-card: #ffffff;
+
+  /* Text */
+  --color-text: #3b3a36;
+  --color-subtle-text: #6b6760;
+
+  /* Borders */
+  --color-border: #e1ddd7;
+
+  /* Buttons + Accents */
+  --color-primary: #2d5523;
+  --color-primary-hover: #788f7e;
+  --color-primary-dark: #6f8b74; /* used for “unsaved changes” */
+  --color-button-dark: #2b3d2e;
+
+  --color-accent: #4f634a;
+
+  /* Shadows */
+  --shadow-soft: 0 2px 6px rgba(79, 99, 74, 0.12);
+  --shadow-medium: 0 6px 20px rgba(79, 99, 74, 0.18);
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* Layout widths */
+  --card-width: 780px;
+  --modal-width: 480px;
+
+  --toast-green-bg: rgba(34, 197, 94, 0.14);
+  --toast-green-border: rgba(34, 197, 94, 0.45);
+  --toast-green-text: #14532d;
+
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI";
+}
+
+/* --------------------------------------- */
+/* MANUAL DARK MODE (data-theme="dark")    */
+/* --------------------------------------- */
+
+[data-theme="dark"] {
+  --color-bg: #0d1410;
+  --color-card: #1a241c;
+
+  --color-text: #f2fff4;
+  --color-subtle-text: #acc7b4;
+
+  --color-border: #2d3c30;
+
+  --color-primary: #a3c7a6;
+  --color-primary-hover: #93b997;
+  --color-primary-dark: #8bb191;
+  --color-button-dark: #8bb191;
+
+  --color-accent: #d7f1db;
+
+  --shadow-soft: 0 2px 8px rgba(163, 199, 166, 0.08);
+  --shadow-medium: 0 6px 22px rgba(163, 199, 166, 0.14);
+}
+
+/* -------------------------------------------- */
+/* AUTO DARK MODE (when user system is dark)    */
+/* -------------------------------------------- */
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #0d1410;
+    --color-card: #1a241c;
+
+    --color-text: #f2fff4;
+    --color-subtle-text: #acc7b4;
+
+    --color-border: #2d3c30;
+
+    --color-primary: #a3c7a6;
+    --color-primary-hover: #93b997;
+    --color-primary-dark: #8bb191;
+
+    --color-accent: #d7f1db;
+
+    --shadow-soft: 0 2px 8px rgba(163, 199, 166, 0.08);
+    --shadow-medium: 0 6px 22px rgba(163, 199, 166, 0.14);
+
+    --toast-green-bg: #8bb191;
+    --toast-green-border: rgba(45, 226, 111, 0.55);
+    --toast-green-text: #bbf7d0;
+  }
+}
+
+/* ---------------------------- */
+/* BASE/RESET STYLES           */
+/* ---------------------------- */
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.30s ease, color 0.30s ease;
+}
+
+button,
+input,
+select {
+  transition: all 0.15s ease;
+  font-family: var(--font-main);
+}
+
+/* Default card class for global use */
+.card {
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-border);
+}
+
+.p-toast .p-toast-message.p-toast-message-success::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: var(--toast-green-border);
+}
